@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <title>YT Timemarks</title>
+    <style>
+      h1 {
+        display: inline;
+      }
+
+      .logo {
+        height: 1.5em;
+        margin-top: 4px;
+      }
+
+      body {
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      a {
+        color: #d25e8e;
+      }
+
+      .shortcuts {
+        margin-top: 4em;
+        font-size: .7em;
+      }
+
+      .help {
+        margin-top: 3em;
+      }
+
+      .content {
+      }
+
+      #timemarks {
+/*        max-height: 20em;
+        overflow: auto;*/
+      }
+
+      #timemarks > ul > li {
+        margin-top: 1em;
+      }
+
+      #timemarks > ul > li > ul > li {
+        margin-top: .3em;
+      }
+
+      ul {
+        padding-left: 1.2em;
+      }
+
+      .small {
+        font-size: .7em;
+        margin-top: 4em;
+        max-width: 50em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="content">
+      <div>
+        <img src="./icon128.png" class="logo"/>
+        <h1>YT Timemarks </h1><a href="#" id="reload">(reload)</a>
+      </div>
+
+      <div id="timemarks"></div>
+
+      <div class="shortcuts">
+        <h3>Shortcuts</h3>
+        <div><input type="text" id="capture" maxlength="10" size="10"/> Capture timestamp</div>
+        <div><input type="text" id="capture_note" maxlength="10" size="10"/> Capture timestamp with a note</div>
+        <a href="#" id="update_shortcuts">Update</a><br />
+        <a href="#" id="default_shortcuts">Default</a><br />
+        <a href="https://keycode.info/">Get Codes</a><br />
+
+        <br />
+        <br />
+        <a href="#" id="clear">Clear All Data</a>
+        (This is permanent)
+      </div>
+
+      <div class="help">
+        <b>Help?</b> Try reloading (ctrl-r) the youtube page.
+        <br/>
+        <br/>
+        <b>Optimized for networked thought with <a href="https://roamresearch.com/">Roam.</a></b>
+        <br/>
+        <br/>
+        Feature Requests / Bugs -> <a href="https://github.com/">github</a>
+        <br/>
+        <br/>
+        Developed by <a href="http://www.exrhizo.me">Alex Warren (exrhizo)</a>
+        <br/>
+        Shoutout to <a href="https://morgansutherland.com/">Morgan Sutherland</a>
+      </div>
+
+
+
+      <div class="small">
+        <b>TODO: Import into premiere.</b>
+        It could be interesting to be able to be able to import in to premiere,
+        but it would require some work. It would mean using a format like below:
+        <a href="http://www.fcp.co/final-cut-pro/tutorials/1912-demystifying-final-cut-pro-xmls-by-philip-hodgetts-and-gregory-clarke">About premiere & Final Cut XML files</a>
+        <div>
+          &lt;marker&gt;<br/>
+          &nbsp&nbsp&lt;name&gt;Interview, Michael&lt;/name&gt;<br/>
+          &nbsp&nbsp&lt;comment&gt;&lt;/comment&gt;<br/>
+          &nbsp&nbsp&lt;in&gt;0&lt;/in&gt;<br/>
+          &nbsp&nbsp&lt;out&gt;16618&lt;/out&gt;<br/>
+          &lt;/marker&gt;<br/>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="cash.min.js"></script>
+    <script src="lib.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

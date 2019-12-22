@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+
+  "name": "yt-timestamp",
+  "description": "Timestamp bookmarks in YouTube.",
+  "version": "1.0.0.0",
+
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png",
+             "256": "icon256.png"},
+
+  "browser_action": {
+    // "default_popup": "options.html" 
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "https://www.youtube.com/",
+    "storage"
+  ],
+
+  "options_page": "options.html",
+
+   "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["cash.min.js", "lib.js", "youtube.js"],
+      "run_at": "document_end"
+    }
+
+  ]
+
+}

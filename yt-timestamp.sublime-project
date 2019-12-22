@@ -1,0 +1,55 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "folder_exclude_patterns": ["chrome-extensions-examples"]
+        }
+    ],
+    "settings":
+    {
+        "tab_size":  2,
+        "translate_tabs_to_spaces": true,
+        "rulers": [80, 120],
+        "js_prettier": {
+            "auto_format_on_save": true,
+            "auto_format_on_save_excludes": [
+                "*.jsx",
+                "*.mjs",
+                "*.json",
+                "*.html",
+                "*.graphql",
+                "*.gql",
+                "*.ts",
+                "*.tsx",
+                "*.css",
+                "*.scss",
+                "*.less",
+                "*.md",
+                "*.mdx",
+                "*.yml",
+                "*.vue",
+                "component.html"
+            ],
+            "auto_format_on_save_requires_prettier_config": true
+        }
+    },
+    "binary_file_patterns":
+    [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip",
+        "node_modules/**",
+        "bower_components/**"
+    ],
+}
