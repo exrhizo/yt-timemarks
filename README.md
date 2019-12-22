@@ -1,4 +1,4 @@
-# yt-timemarks
+# yt-timemarks _Chrome Extension_
 
 **Easily bookmark the best moments in YouTube videos!**
 
