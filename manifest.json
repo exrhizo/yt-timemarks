@@ -14,7 +14,7 @@
   },
 
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["bootstrap.js", "lib.js"],
     "persistent": false
   },
 

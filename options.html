@@ -33,6 +33,7 @@
       }
 
       .content {
+        max-width: 35em;
       }
 
       #timemarks {
@@ -64,18 +65,19 @@
     <div class="content">
       <div>
         <img src="./icon128.png" class="logo"/>
-        <h1>YT Timemarks </h1><a href="#" id="reload">(reload)</a>
+        <h1>YT Timemarks</h1><a href="#" id="reload">(reload)</a>
       </div>
 
       <div id="timemarks"></div>
 
       <div class="shortcuts">
         <h3>Shortcuts</h3>
+        When you press the shortcut key while on a youtube video page, a timemark will be captured and the YT Timemarks icon will flash. Default shorcuts are <b>b</b> for a regular capture or <b>v</b> to capture with a comment.
         <div><input type="text" id="capture" maxlength="10" size="10"/> Capture timestamp</div>
         <div><input type="text" id="capture_note" maxlength="10" size="10"/> Capture timestamp with a note</div>
-        <a href="#" id="update_shortcuts">Update</a><br />
-        <a href="#" id="default_shortcuts">Default</a><br />
-        <a href="https://keycode.info/">Get Codes</a><br />
+        <a href="#" id="update_shortcuts">Update Shortcuts</a><br />
+        <a href="#" id="default_shortcuts">Reset to Default</a><br /><br />
+        <a href="https://keycode.info/">See Shortcut Codes</a><br />
 
         <br />
         <br />

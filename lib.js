@@ -74,12 +74,10 @@ DEFAULT_STORAGE = {
 };
 
 function resetStorage(callback) {
+  callback = callback || (() => void 0);
   chrome.storage.sync.clear();
-  chrome.storage.sync.set(DEFAULT_STORAGE, () => {
-    callback();
-  });
+  chrome.storage.sync.set(DEFAULT_STORAGE, callback);
 }
-
 
 function withCapture(callback) {
   chrome.storage.sync.get(["capture", "capture_note"], function(items) {
@@ -87,7 +85,6 @@ function withCapture(callback) {
     var capture_note = items["capture_note"];
 
     callback((evt) => {
-      console.log(`GOT evt. ${evt.code} ${capture} ${capture_note}`);
       evt = evt || window.event;
       is_capture = evt.code === capture;
       is_capture_note = evt.code === capture_note;
@@ -130,6 +127,8 @@ function withCapture(callback) {
         comment_name: comment_name,
         comment: comment
       });
+
+      chrome.runtime.sendMessage({message: "flash"});
     });
   });
 }
